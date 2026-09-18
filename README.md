@@ -53,4 +53,54 @@ CREATE TABLE order_items (
 
 ## Queries
 
-(We'll fill this section in together, one query at a time.)
+### JOIN Query 1: Orders with customer name, city, and order date
+
+```sql
+SELECT 
+  o.order_id,
+  c.customer_name,
+  c.city,
+  o.order_date
+FROM orders o
+INNER JOIN customers c ON o.customer_id = c.customer_id
+ORDER BY o.order_date;
+```
+
+**Explanation:** Joins each order to its customer using the shared 
+`customer_id` column, showing who placed each order, from where, and when. 
+Only orders with a matching customer appear (INNER JOIN).
+
+**Result:** 15 rows returned — one per order.
+
+**Business interpretation:** Management can see full order history tied to 
+real customer identities and locations, useful for spotting regional 
+demand patterns.
+
+---
+
+### JOIN Query 2: Order items with product name, category, price, and quantity
+
+```sql
+SELECT 
+  oi.order_item_id,
+  oi.order_id,
+  p.product_name,
+  p.category,
+  p.price,
+  oi.quantity
+FROM order_items oi
+INNER JOIN products p ON oi.product_id = p.product_id
+ORDER BY oi.order_id;
+```
+
+**Explanation:** Joins each purchased line item to its product details via 
+`product_id`, turning raw product IDs into readable names, categories, 
+and prices alongside the quantity bought.
+
+**Result:** 25 rows returned — one per order item.
+
+**Business interpretation:** Shows exactly which products move in which 
+categories and at what volume, helping management see which categories 
+(Grains, Dairy, Household) drive the most purchases.
+
+---
