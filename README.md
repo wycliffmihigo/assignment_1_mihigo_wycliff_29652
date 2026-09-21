@@ -123,6 +123,7 @@ appear, with `order_id`/`order_date` shown as NULL.
 **Result:** 15 rows returned. In this dataset, all 5 customers happen to 
 have placed at least one order, so no NULLs appear — but the query is 
 built to handle that case safely.
+<img width="1549" height="813" alt="quey3" src="https://github.com/user-attachments/assets/8e088ed2-b3b7-4a50-ad59-cc262f25835e" />
 
 **Business interpretation:** This is useful for management to identify 
 inactive customers (those with no purchase history) who might need 
@@ -132,7 +133,7 @@ re-engagement, e.g. through promotions.
 categories and at what volume, helping management see which categories 
 (Grains, Dairy, Household) drive the most purchases.
 ### CTE Query: Customers with above-average total spend
-<img width="1549" height="813" alt="quey3" src="https://github.com/user-attachments/assets/8e088ed2-b3b7-4a50-ad59-cc262f25835e" />
+
 
 
 ```sql
