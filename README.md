@@ -75,6 +75,7 @@ Only orders with a matching customer appear (INNER JOIN).
 **Business interpretation:** Management can see full order history tied to 
 real customer identities and locations, useful for spotting regional 
 demand patterns.
+
 <img width="1597" height="817" alt="query1" src="https://github.com/user-attachments/assets/596ab091-0955-49c4-84ce-408186d109b1" />
 
 
@@ -123,6 +124,7 @@ appear, with `order_id`/`order_date` shown as NULL.
 **Result:** 15 rows returned. In this dataset, all 5 customers happen to 
 have placed at least one order, so no NULLs appear — but the query is 
 built to handle that case safely.
+
 <img width="1549" height="813" alt="quey3" src="https://github.com/user-attachments/assets/8e088ed2-b3b7-4a50-ad59-cc262f25835e" />
 
 **Business interpretation:** This is useful for management to identify 
@@ -165,6 +167,7 @@ result set to keep only customers spending above the overall average.
 **Business interpretation:** These are the supermarket's top-value 
 customers. Management could target them with loyalty rewards, or study 
 their buying patterns to attract similar high-spend customers.
+
 <img width="1561" height="847" alt="CTE query" src="https://github.com/user-attachments/assets/072374ae-488b-45eb-b89b-3323c2a65dd6" />
 ---
 
@@ -198,6 +201,7 @@ number (e.g. 1, 1, 3).
 
 **Business interpretation:** Gives management an instant leaderboard of 
 customer value, useful for prioritizing loyalty outreach or VIP treatment.
+
 <img width="1362" height="815" alt="window function 1" src="https://github.com/user-attachments/assets/e327de02-b34f-4614-bc1b-32c874ae0c4e" />
 
 ---
@@ -225,6 +229,7 @@ then numbering resets to 1 for Bob's orders, and so on.
 **Business interpretation:** Useful for identifying a customer's first 
 order (order_sequence = 1, good for tracking new customer acquisition) 
 vs. repeat/loyal purchase behavior.
+
 <img width="1305" height="815" alt="window fuction 2" src="https://github.com/user-attachments/assets/3bb77a29-513b-4505-a608-728f9adbd038" />
 
 ---
@@ -262,6 +267,7 @@ that date.
 **Business interpretation:** Lets management visualize revenue growth 
 over time at a glance — useful for spotting trends, seasonal spikes, 
 or slow periods.
+
 <img width="703" height="798" alt="windo function 3" src="https://github.com/user-attachments/assets/a8f47497-5db4-49d3-829e-0f7dd284f569" />
 
 ---
@@ -293,6 +299,7 @@ respectively; her first order shows NULL as expected.
 customer — useful for spotting who buys regularly vs. sporadically, and 
 could inform when to send re-engagement reminders (e.g., if someone's 
 gap is unusually long).
+
 <img width="1547" height="777" alt="window function 4" src="https://github.com/user-attachments/assets/b6d8c79e-cfaa-43a3-9c9b-fc70c68da132" />
 
 ---
