@@ -100,10 +100,10 @@ ORDER BY oi.order_id;
 and prices alongside the quantity bought.
 
 **Result:** 25 rows returned — one per order item.
-### JOIN Query 3: All customers and their orders (including customers with no orders)
 
 <img width="1581" height="850" alt="query2" src="https://github.com/user-attachments/assets/0f87e0b0-1e9c-48da-9fee-44c75c7fdf6f" />
 
+### JOIN Query 3: All customers and their orders (including customers with no orders)
 
 ```sql
 SELECT 
